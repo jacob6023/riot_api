@@ -1,16 +1,21 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb  8 14:12:37 2022
-
-Author: 417-DevOps
-Desc: Riot API Bootcamp Module 1 example
-"""
-
-import pandas as pd
 import json
+import window
+# Assuming the JSON data is stored in a file named "players.json"
 
 
-with open('1641207119.json') as f:
-    d = json.load(f)
-    print(d)
-    print(1)
+with open("playerStats.json", "r") as file:
+    data = json.load(file)
+
+    # Accessing information about the first player
+for i in range(len(data["players"])):
+
+    first_player = data["players"][i]
+    puuid = first_player["puuid"]
+    game_name = first_player["gameName"]
+    tag_line = first_player["tagLine"]
+
+    # Printing the information
+    print("PUUID:", puuid)
+    print("Game Name:", game_name)
+    print("Tag Line:", tag_line)
+
