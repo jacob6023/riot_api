@@ -13,3 +13,4 @@ import json
 with open('1641207119.json') as f:
     d = json.load(f)
     print(d)
+    print(1)
